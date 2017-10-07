@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="x-ua-compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: gap: 'unsafe-inline' 'unsafe-eval' https://ssl.gstatic.com; style-src * 'unsafe-inline'; media-src *" />
   <title>Test</title>
   <meta name="author" content="Juan Fernandez Liviano" />
   <meta name="description" content="matematicas" />
@@ -13,7 +14,9 @@
 
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/codigo.js"></script>
-
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 <body>
@@ -29,8 +32,8 @@
             <li><a href="#Home">Pagina Principal</a></li>
             <li><a href="#" id="idprueba">Matematicas</a>
               <ul>
-                <li><a href="#"class="pulsador" id="euromillones">Euromillones</a></li>
-                <li>Primitiva</li>
+                <li><a href="#"class="pulsador" id="loadpage" data-inline="true">Suma</a></li>
+                <li>resta</li>
               </ul>
             </li>
             <li><a href="#">Ingles</a></li>

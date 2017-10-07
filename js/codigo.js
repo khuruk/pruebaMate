@@ -13,17 +13,19 @@ $(document).ready(function () {
   $('#idprueba').click(
     function (e) {
       if ($(this).siblings('ul').is(":visible")) {
-        alert("caca")
+        $(this).siblings('ul').css({ display: "none" });
       } else {
         $(this).siblings('ul').css({ display: "block" });
       }
     }
   );
 
-
+  $( "#loadpage" ).on( "click", function() {
+    $.mobile.loadPage( "./suma.html");
+  });
 
   $('.pulsador').click(function () {
-    var valor = $(this)[0].id;
+    var valor = $(this).attr('id');
     switch (valor) {
       case "suma":
       $.get(valor+".html", function(htmlexterno){
